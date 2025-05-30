@@ -1,0 +1,25 @@
+﻿2025-05-29T22:47:14.2384915Z ##[group]Run gh api graphql -F owner=$OWNER -F name=$REPO -F topic="$TOPIC"  -f query='
+2025-05-29T22:47:14.2385530Z [36;1mgh api graphql -F owner=$OWNER -F name=$REPO -F topic="$TOPIC"  -f query='[0m
+2025-05-29T22:47:14.2385962Z [36;1m  query($owner: String!, $name: String!, $topic: String) {[0m
+2025-05-29T22:47:14.2386576Z [36;1m    repository(owner: $owner, name: $name){[0m
+2025-05-29T22:47:14.2386885Z [36;1m      labels(first: 1, query: $topic) {[0m
+2025-05-29T22:47:14.2387140Z [36;1m        edges {[0m
+2025-05-29T22:47:14.2387327Z [36;1m          node {[0m
+2025-05-29T22:47:14.2387538Z [36;1m            id[0m
+2025-05-29T22:47:14.2387713Z [36;1m            name[0m
+2025-05-29T22:47:14.2387892Z [36;1m          }[0m
+2025-05-29T22:47:14.2388060Z [36;1m        }[0m
+2025-05-29T22:47:14.2388216Z [36;1m      }[0m
+2025-05-29T22:47:14.2388379Z [36;1m    }[0m
+2025-05-29T22:47:14.2388559Z [36;1m  }' > repository_label_data.json[0m
+2025-05-29T22:47:14.2388785Z [36;1m  [0m
+2025-05-29T22:47:14.2389229Z [36;1mecho 'LABEL_ID='$(jq '.data.repository.labels.edges[].node | .id ' repository_label_data.json) >> $GITHUB_ENV[0m
+2025-05-29T22:47:14.2442069Z shell: /usr/bin/bash -e {0}
+2025-05-29T22:47:14.2442305Z env:
+2025-05-29T22:47:14.2442839Z   DISCUSSION_BODY_HTML: "<h3 dir=\"auto\">Select Topic Area</h3>\n<p dir=\"auto\">Product Feedback</p>\n<h3 dir=\"auto\">Body</h3>\n<p dir=\"auto\">GitHub Apps - Youniformdi</p>"
+2025-05-29T22:47:14.2443432Z   DISCUSSION_ID: "D_kwDOEfmk4M4AgAgd"
+2025-05-29T22:47:14.2443890Z   GITHUB_TOKEN: ***
+2025-05-29T22:47:14.2444078Z   OWNER: community
+2025-05-29T22:47:14.2444247Z   REPO: community
+2025-05-29T22:47:14.2444429Z   TOPIC: product feedback
+2025-05-29T22:47:14.2444625Z ##[endgroup]

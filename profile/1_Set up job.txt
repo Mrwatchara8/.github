@@ -1,0 +1,42 @@
+﻿2025-05-29T22:47:10.1388846Z Current runner version: '2.324.0'
+2025-05-29T22:47:10.1417354Z ##[group]Operating System
+2025-05-29T22:47:10.1418111Z Ubuntu
+2025-05-29T22:47:10.1418690Z 24.04.2
+2025-05-29T22:47:10.1419166Z LTS
+2025-05-29T22:47:10.1419658Z ##[endgroup]
+2025-05-29T22:47:10.1420246Z ##[group]Runner Image
+2025-05-29T22:47:10.1420855Z Image: ubuntu-24.04
+2025-05-29T22:47:10.1421398Z Version: 20250511.1.0
+2025-05-29T22:47:10.1422434Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-29T22:47:10.1423920Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-05-29T22:47:10.1424785Z ##[endgroup]
+2025-05-29T22:47:10.1425336Z ##[group]Runner Image Provisioner
+2025-05-29T22:47:10.1425985Z 2.0.437.1
+2025-05-29T22:47:10.1426833Z ##[endgroup]
+2025-05-29T22:47:10.1429605Z ##[group]GITHUB_TOKEN Permissions
+2025-05-29T22:47:10.1431602Z Actions: write
+2025-05-29T22:47:10.1432177Z Attestations: write
+2025-05-29T22:47:10.1433138Z Checks: write
+2025-05-29T22:47:10.1433625Z Contents: write
+2025-05-29T22:47:10.1434202Z Deployments: write
+2025-05-29T22:47:10.1434697Z Discussions: write
+2025-05-29T22:47:10.1435187Z Issues: write
+2025-05-29T22:47:10.1435774Z Metadata: read
+2025-05-29T22:47:10.1436619Z Models: read
+2025-05-29T22:47:10.1437123Z Packages: write
+2025-05-29T22:47:10.1437687Z Pages: write
+2025-05-29T22:47:10.1438187Z PullRequests: write
+2025-05-29T22:47:10.1438682Z RepositoryProjects: write
+2025-05-29T22:47:10.1439364Z SecurityEvents: write
+2025-05-29T22:47:10.1439865Z Statuses: write
+2025-05-29T22:47:10.1440328Z ##[endgroup]
+2025-05-29T22:47:10.1443318Z Secret source: Actions
+2025-05-29T22:47:10.1444377Z Prepare workflow directory
+2025-05-29T22:47:10.1771571Z Prepare all required actions
+2025-05-29T22:47:10.1810402Z Getting action download info
+2025-05-29T22:47:10.4345376Z ##[group]Download immutable action package 'actions/github-script@v7'
+2025-05-29T22:47:10.4346749Z Version: 7.0.1
+2025-05-29T22:47:10.4347851Z Digest: sha256:bce02966afe3a75123f766b765abe432fac5464b74976015dc06b811ac9054c7
+2025-05-29T22:47:10.4349055Z Source commit SHA: 60a0d83039c74a4aee543508d2ffcb1c3799cdea
+2025-05-29T22:47:10.4349879Z ##[endgroup]
+2025-05-29T22:47:10.6762301Z Complete job name: label-templated-discussion

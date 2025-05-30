@@ -1,0 +1,37 @@
+﻿2025-05-29T22:47:13.6323783Z ##[group]Run actions/github-script@v7
+2025-05-29T22:47:13.6324157Z with:
+2025-05-29T22:47:13.6324413Z   result-encoding: string
+2025-05-29T22:47:13.6326923Z   script: try {
+  const jsdom = require('jsdom');
+  const { JSDOM } = jsdom;
+  const { DISCUSSION_BODY_HTML } = process.env
+  
+  const fragment = JSDOM.fragment(DISCUSSION_BODY_HTML);
+  const selectTopicHeader = fragment.querySelector("h3");
+  const templated = selectTopicHeader.textContent === 'Select Topic Area';
+  if (!templated) {
+    return "";
+  }
+  
+  const selectedTopicElement = selectTopicHeader.nextElementSibling;
+  if (!selectedTopicElement) {
+    return "";
+  }
+  
+  const selectedTopic = selectedTopicElement.textContent.trim().toLowerCase();
+  const validTopics = ["product feedback", "question", "bug", "show & tell", "general"];
+  return validTopics.includes(selectedTopic) ? selectedTopic : "";
+  
+} catch (error) {
+  return "";
+}
+
+2025-05-29T22:47:13.6329467Z   github-token: ***
+2025-05-29T22:47:13.6329700Z   debug: false
+2025-05-29T22:47:13.6329963Z   user-agent: actions/github-script
+2025-05-29T22:47:13.6330243Z   retries: 0
+2025-05-29T22:47:13.6330482Z   retry-exempt-status-codes: 400,401,403,404,422
+2025-05-29T22:47:13.6330783Z env:
+2025-05-29T22:47:13.6331320Z   DISCUSSION_BODY_HTML: "<h3 dir=\"auto\">Select Topic Area</h3>\n<p dir=\"auto\">Product Feedback</p>\n<h3 dir=\"auto\">Body</h3>\n<p dir=\"auto\">GitHub Apps - Youniformdi</p>"
+2025-05-29T22:47:13.6331952Z   DISCUSSION_ID: "D_kwDOEfmk4M4AgAgd"
+2025-05-29T22:47:13.6332222Z ##[endgroup]

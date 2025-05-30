@@ -1,0 +1,25 @@
+﻿2025-05-29T22:47:14.5086341Z ##[group]Run gh api graphql -f query='
+2025-05-29T22:47:14.5086731Z [36;1mgh api graphql -f query='[0m
+2025-05-29T22:47:14.5087032Z [36;1m  mutation($labelableId: ID!, $labelIds: [ID!]!) {[0m
+2025-05-29T22:47:14.5087467Z [36;1m    addLabelsToLabelable(input: {labelableId: $labelableId, labelIds: $labelIds}) {[0m
+2025-05-29T22:47:14.5088113Z [36;1m      labelable {[0m
+2025-05-29T22:47:14.5088327Z [36;1m        labels(first: 10) {[0m
+2025-05-29T22:47:14.5088543Z [36;1m          edges {[0m
+2025-05-29T22:47:14.5088731Z [36;1m            node {[0m
+2025-05-29T22:47:14.5088915Z [36;1m              id[0m
+2025-05-29T22:47:14.5089099Z [36;1m              name[0m
+2025-05-29T22:47:14.5089278Z [36;1m            }[0m
+2025-05-29T22:47:14.5089456Z [36;1m          }[0m
+2025-05-29T22:47:14.5089620Z [36;1m        }[0m
+2025-05-29T22:47:14.5089787Z [36;1m      }[0m
+2025-05-29T22:47:14.5089947Z [36;1m    }[0m
+2025-05-29T22:47:14.5090177Z [36;1m  }' -f labelableId=$DISCUSSION_ID -f labelIds=$LABEL_ID[0m
+2025-05-29T22:47:14.5090491Z [36;1m  [0m
+2025-05-29T22:47:14.5142570Z shell: /usr/bin/bash -e {0}
+2025-05-29T22:47:14.5142814Z env:
+2025-05-29T22:47:14.5143326Z   DISCUSSION_BODY_HTML: "<h3 dir=\"auto\">Select Topic Area</h3>\n<p dir=\"auto\">Product Feedback</p>\n<h3 dir=\"auto\">Body</h3>\n<p dir=\"auto\">GitHub Apps - Youniformdi</p>"
+2025-05-29T22:47:14.5143913Z   DISCUSSION_ID: "D_kwDOEfmk4M4AgAgd"
+2025-05-29T22:47:14.5144158Z   LABEL_ID: "LA_kwDOEfmk4M8AAAABGkmtNQ"
+2025-05-29T22:47:14.5144693Z   GITHUB_TOKEN: ***
+2025-05-29T22:47:14.5144876Z ##[endgroup]
+2025-05-29T22:47:14.8208776Z {"data":{"addLabelsToLabelable":{"labelable":{"labels":{"edges":[{"node":{"id":"LA_kwDOEfmk4M713oDw","name":"Mobile"}},{"node":{"id":"LA_kwDOEfmk4M8AAAABGkmtNQ","name":"Product Feedback"}}]}}}}}

@@ -1,0 +1,20 @@
+﻿2025-05-29T22:47:10.7511739Z ##[group]Run gh api graphql -F owner=$OWNER -F name=$REPO -F number=$DISCUSSION_NUMBER  -f query='
+2025-05-29T22:47:10.7512983Z [36;1mgh api graphql -F owner=$OWNER -F name=$REPO -F number=$DISCUSSION_NUMBER  -f query='[0m
+2025-05-29T22:47:10.7513879Z [36;1m  query($owner: String!, $name: String!, $number: Int!) {[0m
+2025-05-29T22:47:10.7514591Z [36;1m    repository(owner: $owner, name: $name){[0m
+2025-05-29T22:47:10.7515222Z [36;1m      discussion(number: $number) {[0m
+2025-05-29T22:47:10.7515758Z [36;1m        bodyHTML[0m
+2025-05-29T22:47:10.7516571Z [36;1m        id[0m
+2025-05-29T22:47:10.7517002Z [36;1m      }[0m
+2025-05-29T22:47:10.7517390Z [36;1m    }[0m
+2025-05-29T22:47:10.7517834Z [36;1m  }' > discussion_data.json[0m
+2025-05-29T22:47:10.7518370Z [36;1m  [0m
+2025-05-29T22:47:10.7519188Z [36;1mecho 'DISCUSSION_BODY_HTML='$(jq '.data.repository.discussion.bodyHTML' discussion_data.json) >> $GITHUB_ENV[0m
+2025-05-29T22:47:10.7520445Z [36;1mecho 'DISCUSSION_ID='$(jq '.data.repository.discussion.id' discussion_data.json) >> $GITHUB_ENV[0m
+2025-05-29T22:47:10.7707250Z shell: /usr/bin/bash -e {0}
+2025-05-29T22:47:10.7708097Z env:
+2025-05-29T22:47:10.7708805Z   GITHUB_TOKEN: ***
+2025-05-29T22:47:10.7709218Z   OWNER: community
+2025-05-29T22:47:10.7709624Z   REPO: community
+2025-05-29T22:47:10.7710035Z   DISCUSSION_NUMBER: 161028
+2025-05-29T22:47:10.7710516Z ##[endgroup]

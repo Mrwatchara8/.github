@@ -1,0 +1,12 @@
+﻿2025-05-29T22:47:11.1573814Z ##[group]Run npm install jsdom
+2025-05-29T22:47:11.1574966Z [36;1mnpm install jsdom[0m
+2025-05-29T22:47:11.1652348Z shell: /usr/bin/bash -e {0}
+2025-05-29T22:47:11.1653257Z env:
+2025-05-29T22:47:11.1655296Z   DISCUSSION_BODY_HTML: "<h3 dir=\"auto\">Select Topic Area</h3>\n<p dir=\"auto\">Product Feedback</p>\n<h3 dir=\"auto\">Body</h3>\n<p dir=\"auto\">GitHub Apps - Youniformdi</p>"
+2025-05-29T22:47:11.1658057Z   DISCUSSION_ID: "D_kwDOEfmk4M4AgAgd"
+2025-05-29T22:47:11.1658802Z ##[endgroup]
+2025-05-29T22:47:13.6133835Z 
+2025-05-29T22:47:13.6134476Z added 39 packages in 2s
+2025-05-29T22:47:13.6134898Z 
+2025-05-29T22:47:13.6135081Z 7 packages are looking for funding
+2025-05-29T22:47:13.6135563Z   run `npm fund` for details
